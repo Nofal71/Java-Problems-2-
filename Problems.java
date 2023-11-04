@@ -48,6 +48,25 @@ for(int i = 0 ; i< Myarray.length;i++)
 }
 }
 
+public static void Q3(){
+  System.out.println("Finding Index of Element in Array ");
+  System.out.println("This is Array = {1,6,7,9,4,8,3,5,3} ");
+ int Array[] = {1,6,7,9,4,8,3,5,3};
+ Scanner Arr = new Scanner(System.in);
+ System.out.print("Enter Element from above Array = "); 
+ int a = Arr.nextInt();
+for(int i = 0; i<Array.length;i++ ){
+  if(Array[i]==a){
+ Array[i]=i;
+ System.out.println("Index of Array Element is "+Array[i]);
+ 
+ }
+ else{
+  System.out.println("No such an Element in Array ");
+  break;
+ }
+}
+}
 
 
 
@@ -56,6 +75,7 @@ public static void main(String[] args) {
 
   System.out.println("1 - Acending order   "); 
   System.out.println("2 - Decending order   "); 
+  System.out.println("3 - Finding Index of Element in Array ");
 
   Scanner input = new Scanner(System.in);
   System.out.print("Enter Question Number = ");
@@ -66,6 +86,9 @@ public static void main(String[] args) {
       break;
     case 2:
       Q2();
+      break;
+    case 3:
+      Q3();
       break;
     default:
       break;
