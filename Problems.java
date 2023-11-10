@@ -100,6 +100,27 @@ if (Largest < array[i][j]) {
 System.out.println(Largest);
 
 }
+public static void Q6(){
+  System.out.println("Swaping Rows to columns in 2D array ");
+  int array[][] = {
+      {1, 1, 1},
+      {2, 2, 2},
+      {3, 3, 3}
+  };
+  int rows = array.length;
+  int columns = array[0].length;
+  int matrix[][] = new int[columns][rows];
+
+  for (int i = 0; i < rows; i++) {
+      for (int j = 0; j < columns; j++) {
+          matrix[j][i] = array[i][j];
+          System.out.print(matrix[j][i] );//swaping 
+      }
+  
+  }
+} 
+  
+
 
 
 public static void main(String[] args) {
@@ -109,7 +130,8 @@ public static void main(String[] args) {
   System.out.println("3 - Finding Index of Element in Array ");
   System.out.println("4 - diagonal sum of 2D Arrays  ");
   System.out.println("5 - Largest Elements in 2d arrays : ");
-
+  System.out.println("6 - Swaping Rows to columns in 2D array ");
+  
   Scanner input = new Scanner(System.in);
   System.out.print("Enter Question Number = ");
   int Q = input.nextInt();
@@ -129,6 +151,9 @@ public static void main(String[] args) {
     case 5:
       Q5();
       break;
+    case 6:
+      Q6();
+
     default:
       break;
   }
