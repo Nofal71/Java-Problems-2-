@@ -121,6 +121,30 @@ public static void Q6(){
 } 
   
 
+public static void Q7() {
+  System.out.println("Product of 2D arrays ");
+          int array1[][] = {
+              {1, 1, 1},
+              {2, 2, 2},
+              {3, 3, 3}
+          };
+      
+          int array2[][] = {
+              {1, 1, 1},
+              {2, 2, 2},
+              {3, 3, 3}
+          };
+      int rows = array1.length;
+      int columns = array1[0].length;
+      int Array1[][] = new int[rows][columns];
+  
+      for(int i = 0;i<rows;i++){
+          for(int j = 0;j<columns; j++ ){
+          Array1[i][j] = array1[i][j]*array2[i][j];
+          System.out.println(Array1[i][j]);      
+      }    
+      }
+    }
 
 
 public static void main(String[] args) {
@@ -131,7 +155,7 @@ public static void main(String[] args) {
   System.out.println("4 - diagonal sum of 2D Arrays  ");
   System.out.println("5 - Largest Elements in 2d arrays : ");
   System.out.println("6 - Swaping Rows to columns in 2D array ");
-  
+  System.out.println("7 - Product of 2D arrays ");
   Scanner input = new Scanner(System.in);
   System.out.print("Enter Question Number = ");
   int Q = input.nextInt();
@@ -153,7 +177,9 @@ public static void main(String[] args) {
       break;
     case 6:
       Q6();
-
+    case 7:
+      Q7();
+      break;
     default:
       break;
   }
