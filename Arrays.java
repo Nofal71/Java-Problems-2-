@@ -1,29 +1,27 @@
 public class Arrays {
     public static void main(String[] args) {
-        int array1[][] = {
-            {1, 1, 1},
-            {2, 2, 2},
-            {3, 3, 3}
-        };
-    
-        int array2[][] = {
-            {1, 1, 1},
-            {2, 2, 2},
-            {3, 3, 3}
-        };
-    int rows = array1.length;
-    int columns = array1[0].length;
-    int Array1[][] = new int[rows][columns];
-
-    for(int i = 0;i<rows;i++){
-        for(int j = 0;j<columns; j++ ){
-        Array1[i][j] = array1[i][j]*array2[i][j];
-        System.out.println(Array1[i][j]);      
-    }    
+        int x = 5;
+ for (int i = 5 ; i>0 ; i--){
+    for(int j = i ; j>0 ; j--){
+        System.out.print(" ");
     }
-
-
+ for(int k = 0 ; k<(x-i)*2-1; k++){
+    System.out.print("X");
+ }
+System.out.println();
 }
+ for (int i = 1 ; i<5 ; i++){
+    for(int j = 0 ; j<i ; j++){
+        System.out.print(" ");
     }
+   for(int k = 0 ; k < (x-i)*2-1;k++)
+ {
+    System.out.print("X");
+ }
+System.out.println();
+}
+ }
+}
+
 
 
