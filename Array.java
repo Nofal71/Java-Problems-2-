@@ -113,12 +113,19 @@ public class Array {
     }
 
     class Search {
-        private int array[];;
+        private int array[] = {2,3,24,5,1,3};
         private int num;
         private int num2;
         Scanner kthLarge = new Scanner(System.in);
         Scanner KthSmall = new Scanner(System.in);
-       
+
+        public void printUnsorted(){
+            System.out.print("Unsorted Array = ");
+            for(int i = 0 ; i<array.length;i++){
+                System.out.print(array[i]+" ");
+            }
+            System.out.println();
+        }
         public void SortingArray() {
             for (int i = 0; i < array.length-1; i++) {
            for(int j = i+1 ; j<array.length;j++){
@@ -132,7 +139,7 @@ public class Array {
     }
     public void PrintSortedArray(){
 
-    
+        System.out.print("sorted array = ");
            for(int k : array){
             System.out.print( k+ " ");
      
@@ -159,9 +166,9 @@ public class Array {
     class Polymorphism{
         // Polymorphism is OOP concept 
         // different functions with same name
+    private String name ;
+    private int age ;
 
-        String name ;
-        int age ;
     public void printinfo(String name){
      System.out.println(name);
      }
@@ -171,8 +178,14 @@ public class Array {
     public void printinfo(int age){
      System.out.println(age);
     }
+    public String getName(){
+        return name;
     }
-
+    public void setName(String newName){
+        System.out.println(this.name = newName);  
+    }    
+}
+    
     class Inheretence{
         String color;
         public void area(int height , int length){
@@ -194,26 +207,26 @@ public class Array {
     public static void main(String[] args) {
         Array array = new Array();
         
-        Array.Large large = array.new Large();
-        large.find();
-        large.peak();
-        large.maximum();
-        large.minimum();
+        // Array.Large large = array.new Large();
+        // large.find();
+        // large.peak();
+        // large.maximum();
+        // large.minimum();
 
-        Array.ReverseArray reverseArray = array.new ReverseArray();
-        reverseArray.input();
-        reverseArray.reverse();
+        // Array.ReverseArray reverseArray = array.new ReverseArray();
+        // reverseArray.input();
+        // reverseArray.reverse();
 
-        Array.SortArray sortArray = array.new SortArray();
-        sortArray.input();
-        sortArray.sort();
-        sortArray.output();
+        // Array.SortArray sortArray = array.new SortArray();
+        // sortArray.input();
+        // sortArray.sort();
+        // sortArray.output();
 
-        Search search = array.new Search();
-        search.array = new int[]{7,5,8,9,2};
-        search.SortingArray();
-        search.PrintSortedArray();
-        search.KthVAlues();
+        // Search search = array.new Search();
+        // search.printUnsorted(); //constructor calling 
+        // search.SortingArray();
+        // search.PrintSortedArray();
+        // search.KthVAlues();
         
         
 
@@ -221,7 +234,9 @@ public class Array {
         // Obj1.printinfo("Nofal");
         // Obj1.printinfo(18,"Nofal"); 
         // Obj1.printinfo(18);
-           
+        // Obj1.getName();
+        // Obj1.setName("Hassan");
+
         // shape Obj = array.new shape();
         // Obj.color =" red";
         // Obj.output( 24);
